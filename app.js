@@ -19,7 +19,7 @@ app.use('mocImages', express.static('upload/images'));
 app.post('/upload', upload.single('mocImages'), (req, res) => {
     res.json({
         success: 200,
-        image_url: `http://localhost:4000/mocImages/${req.file.filename}`
+        image_url: `http://localhost:${port}/mocImages/${req.file.filename}`
     })
 })
 
