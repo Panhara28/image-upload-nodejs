@@ -14,7 +14,7 @@ const upload = multer({
     storage
 })
 
-app.use('mocImages', express.static('upload/images'));
+app.use('/mocImages', express.static('upload/images'));
 
 app.post('/upload', upload.single('mocImages'), (req, res) => {
     res.json({
