@@ -11,10 +11,7 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({
-    storage,
-    limits: {
-        fileSize: 10
-    }
+    storage
 })
 
 app.use('mocImages', express.static('upload/images'));
